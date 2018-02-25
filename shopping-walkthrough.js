@@ -1,11 +1,26 @@
 'use strict';
 
-const STORE = [
-  {name: 'apples', checked: false},
-  {name: 'oranges', checked: false},
-  {name: 'milk', checked: true},
-  {name: 'bread', checked: false}
-];
+const STORE = { 
+  items : [
+    {name: 'apples', checked: false},
+    {name: 'oranges', checked: false},
+    {name: 'milk', checked: true},
+    {name: 'bread', checked: false}
+  ],
+  hideCompleted: false,
+};
+
+
+
+// function searchTerm() {
+// able to search through STORE
+// maybe filter? 
+// add search bar in HTML? 
+// }
+
+// function editItem() {
+// edit title of item
+// }
 
 function generateItemElement(item, itemIndex, template) {
   return `
@@ -90,7 +105,8 @@ function handleShoppingList(){
   renderShoppingList();
   handleNewItemSubmit();
   handleItemCheckClicked();
-  handleDeleteItemClicked();    
+  handleDeleteItemClicked(); 
+     
 }
 
 $(handleShoppingList);
