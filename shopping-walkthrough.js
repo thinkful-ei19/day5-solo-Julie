@@ -40,7 +40,7 @@ function generateItemElement(item, itemIndex, template) {
 function generateShoppingItemsString(shoppingList){
   console.log('Generating shopping list element');
 
-  const items = shoppingList.map((item, index) => generateItemElement(item,index));
+  const items = shoppingList.items.map((item, index) => generateItemElement(item,index));
   return items.join('');
 }
 
